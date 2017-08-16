@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="assets/styles/profile.css">
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light justify-content-between">
+          <a class="navbar-brand">TT4H</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                         <a id="home" class="nav-link" href="profile.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                         <a id="job-add" class="nav-link" href="add_job.html">Jobs</a>
+                    </li>
+                    <li class="nav-item active">
+                         <a id="job-add" class="nav-link" href="job_list.html">Internships</a>
+                    </li>
+               </ul>
+               <form class="form-inline">
+                    <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <img class="rounded-circle user-avatar-small hidden-lg" src="https://farm5.staticflickr.com/4355/36189377790_9eb66bf50c_m.jpg"
+                    alt="">
+                    <a style="margin:0 1rem;" class="btn btn-outline-dark" href="profile_listing.html">Search</a>
+                    <a href="#" id="sign-out"><i class="fa fa-ellipsis-v"></i></a>
+               </form>
+          </div>
+     </nav>
+     <div class="container ">
+          <div class="row">
+               <ul class="listings">
+                    <li class="row container">
+                         <div class="col-3">
+                              <a href="job_view.html"><img src="https://cdn.dribbble.com/users/68544/screenshots/1466660/g_dr.png" alt="" class="comp-logo"></a>
+                         </div>
+                         <div class="col"></div>
+                         <div class="col-8">
+                              <h3 class="page-header">Job Title</h3>
+                              <h4 class="company-name">All Star Code</h4>
+                              <p class="job-desc">.....</p>
+                              <hr>
+                              <span><a href="#" class="text-left site">www.allstarcode.org</a><br><a href="" class="text-right location">New York, NY</a></span>
+                         </div>
+                    </li>
+               </ul>
+          </div>
+     </div>
+</body>
+</html>

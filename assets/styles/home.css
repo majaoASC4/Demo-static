@@ -1,0 +1,140 @@
+html,body {
+     width: 100%;
+     height:100%;
+     overflow-x: hidden;
+}
+
+#app {
+     background-image: url("https://slack-imgs.com/?c=1&url=https%3A%2F%2Ffarm5.staticflickr.com%2F4425%2F36423310582_78ecd816c1_m.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+html,body {
+     width: 100%;
+     height:100%;
+     overflow-x: hidden;
+}
+
+@font-face {
+     font-family: "Open Sans";
+     src: url("fonts/Open Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+     font-family: "Open Sans";
+     src: url("fonts/Open Sans/OpenSans-Semibold.ttf");
+     font-weight: bold;
+}
+
+@font-face {
+     font-family: "Open Sans";
+     src: url("fonts/Open Sans/OpenSans-Bold.ttf");
+     font-weight: bolder;
+}
+
+@font-face {
+     font-family: "Open Sans";
+     src: url("fonts/Open Sans/OpenSans-Light.ttf");
+     font-weight: lighter;
+}
+
+body {
+     font-weight: 300;
+     font-size: 1rem;
+     font-family: "Open Sans";
+     line-height: 1.6;
+     background-color: #f8f9fa;
+}
+
+.disappear {
+     display: none;
+}
+
+
+
+@media(max-width: 1200px){
+     .hidden-lg {
+          display: none;
+     }
+}
+
+@media(min-width: 1200px){
+     .about{
+          width: 1250px;
+          max-width: 100%;
+     }
+}
+
+.navbar {
+     background-color: #3097D1 !important;
+     padding: 0.3rem 1rem;
+     font-size: 0.9rem;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+     color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+     color: white;
+}
+
+#sign-out {
+     color: white;
+     padding: 0 1rem;
+}
+
+.about {
+     padding: 10px 0;
+}
+
+.card-header {
+     border: 1px solid rgba(0,0,0,0.15);
+}
+
+.sign-in-card{
+     max-width: 400px;
+     padding: 1rem;
+     text-align: center;
+     justify-content: center;
+}
+
+.sign-in-card .card-body {
+     width: auto;
+     max-width: none;
+}
+
+.sign-in-card .card-title {
+     margin: auto 1rem;
+}
+
+.sign-in-button {
+     max-width: 120px;
+     max-height: 36px;
+     box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+     transition: background-color .218s,border-color .218s,box-shadow .218s;
+     text-align: center;
+     cursor: pointer;
+     white-space: nowrap;
+     margin: 5px auto;
+}
+
+.content-wrapper {
+     width: 100%;
+     height: 100%;
+}
+
+.sign-in-button .logo-wrapper {
+     padding: 8px;
+     width: auto;
+     height: auto;
+     display: inline-block;
+     text-align: left;
+}
+
+.sign-in-button span {
+     display: inline-block;
+     vertical-align: top;
+     line-height: 34px;
+}
