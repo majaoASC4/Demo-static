@@ -16,15 +16,7 @@ const templates = {
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                         <a id="home" class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                         <a id="job-add" class="nav-link" href="#">Jobs</a>
-                    </li>
-                    <li class="nav-item active">
-                         <a id="job-add" class="nav-link" href="#">Internships</a>
-                    </li>
+
                </ul>
                <form class="form-inline">
                     <input id="username" class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Username">
@@ -41,14 +33,17 @@ const templates = {
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                          <a id="home" class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                         <a id="job-add" class="nav-link" href="#">Jobs</a>
+                         <a id="job-add" class="nav-link" href="#">Add Jobs</a>
                     </li>
-                    <li class="nav-item active">
-                         <a id="job-display" class="nav-link" href="#">Internships</a>
+                    <li class="nav-item">
+                         <a id="job-display" class="nav-link" href="#">Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                         <a class="nav-link" id="success-story">Latest Successes</a>
                     </li>
                </ul>
                <form class="form-inline">
@@ -62,13 +57,17 @@ const templates = {
      </nav>
      `,
      home: `
+     <div class="logo-appearance" style="width: 100%; height: 100%;text-align:center;">
+          <img src="assets/logo1.png" class="float logo-img rounded-circle" style="border-width:10px;border-style:double;border-color:lightskyblue;width:50vw;max-width:800px;min-width:150px;bottom:0;vertical-align:middle;margin-top:10%;">
+     </div>
      <div class="container body-content">
           <div class="text-center container">
-               <div class="row justify-content-center">
+               <div class="row justify-content-center text-center">
                     <div class="col-12">
-                         <h1 class="main-title" style="color: #6f6; font-size: 4rem;"><strong>Join Us!</strong></h1>
+                         <h1 class="main-title" style="font-size: 4rem;margin-top:2rem;"><strong>Join Us!</strong></h1>
                     </div>
-                    <div class="card sign-in-card">
+                    <div class="col-12" style="margin-bottom: 3rem;">
+                    <div class="card sign-in-card" style="margin: 10px auto;">
                          <h3 class="card-title">Or Sign In with:</h3>
                          <div class="card-body">
                               <div class="sign-in-button" id="google-sign">
@@ -80,6 +79,34 @@ const templates = {
                                         <span id="connected2nh04gaz02u5" style="display:none">Signed in</span></span>
                                    </div>
                               </div>
+                         </div>
+                    </div>
+                    </div>
+
+                    <div class="col-md-4" style="margin-bottom: 1rem;">
+                         <div class="card text-center" style="padding: 1rem;">
+                              <img class="card-img-top" src="https://ichef.bbci.co.uk/news/96/media/images/66259000/jpg/_66259112_marwa144_2ap.jpg" style="width:80px;height:80px;border-radius:100px;margin:10px auto;">
+                              <h5 class="card-title">Christina</h5>
+                              <p class"card-title">Microsoft Digital Marketer</p>
+                              <p class="card-body">"Teens4Hire allowed me to start working at the age of 14! I have absolutely loved working for Microsoft ever since."</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4">
+                         <div class="card" style="padding: 1rem;">
+                         <img class="card-img-top" src="https://i0.wp.com/thegrio.com/wp-content/uploads/2014/01/daniel-green.jpg?fit=256%2C256" style="width:80px;height:80px;border-radius:100px;margin:10px auto;">
+                              <h5 class="card-title">Justin Phillips</h5>
+                              <p class"card-title">JP Morgan UX Designer</p>
+                              <p class="card-body">"I'm a teenager so it's pretty rare for me to find work. But when I do, it always comes from Teens4Hire."</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4" >
+                         <div class="card" style="padding: 1rem;">
+                         <img class="card-img-top" src="https://secure.gravatar.com/avatar/5dc33c63a75de1c70f40d78e52f1f211?s=96&d=mm&r=g" style="width:80px;height:80px;border-radius:100px;margin:10px auto;">
+                              <h5 class="card-title">Shauna Vayne</h5>
+                              <p class"card-title">Google SWE Intern</p>
+                              <p class="card-body">"The best thing about Teens4Hire is that it's free, simplifies data, and is ONLY for teens. It's never been so easy to get a job."</p>
                          </div>
                     </div>
                </div>
@@ -155,7 +182,7 @@ const templates = {
                     </div>
                     <div class="misc col-xl-3 romy2">
                          <div>
-                              <button type="button" class="btn btn-success">Hire Student!</button>
+                              <!-- <button type="button" class="btn btn-success">Hire Student!</button> -->
                          </div>
                          <div class="card">
                               <ul class="nav">
@@ -209,7 +236,7 @@ const templates = {
                <div class="clearfix"></div>
                <h6 class="username">Oliver King</h6>
                <p class="user-description card-text headline">I'm an Aspiring Full-Stack Developer!</p>
-               <a href="#!">View Full Profile</a>
+               <a class="sample-profile" href="#!">View Full Profile</a>
            </div>
        </div>
    </div>
@@ -462,5 +489,162 @@ const templates = {
           </div>
           <button type="button" class="btn btn-outline-info" id="admin-panel-submit">Submit Form</button>
      </div>
+     `,
+     sample_profile: `
+     <div class="profile-render">
+          <div class="about container row">
+               <div class="about-sec col-xl-3">
+                    <div class="card text-center user-intro">
+                         <div class="img-constraint">
+                              <img src="https://www.planwallpaper.com/static/images/Hawaii-Beach-Wallpaper-HD.jpg" alt="" class="card-img-top">
+                         </div>
+                         <div class="card-body">
+                              <img src="https://traviscurry.files.wordpress.com/2013/09/md-headshots-teen-photography-frantza11.jpg?w=869" alt="" class="user-avatar rounded-circle">
+                              <div class="clearfix"></div>
+                              <h6 class="username">Oliver King</h6>
+                              <p class="user-description card-text headline">I'm an Aspiring Full-Stack Developer!</p>
+                         </div>
+                    </div>
+                    <div class="user-public-data card">
+                         <strong>About</strong>
+                         <ul class="list-group list-group-flush">
+                              <li class="list-group-item">Currently Attends <a class="education" href="#!">Ridge High School</a></li>
+                              <li class="list-group-item">Looking For <a class="job-company" href="#!">Web Development Internships</a></li>
+                              <li class="list-group-item">Skills <a class="occupation" href="#!">Javascript HTML CSS jQuery Web Development PHP</a></li>
+                              <li class="list-group-item">
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="feed-sec col-xl-6">
+                         <div class="card">
+                              <div class="card-header">
+                                   <b>Experience</b>
+                              </div>
+                              <ul class="list-group">
+
+                                   <li class="list-group-item">
+                                        <div class="container post">
+                                             <div class="row">
+                                                  <div class="col-4">
+                                                       <img src="https://farm5.staticflickr.com/4401/35751320354_4b069f8c61_m.jpg" alt="" class="rounded">
+                                                  </div>
+
+                                                  <div class="container col-8">
+                                                       <span class="row post-header"><h6 class="col-8 post-owner username">Cooking Website</h6></span>
+                                                       <p>Using CSS, HTML, and jQuery I developed my mother's cooking website. Here is a link to it -<a href="#!">www.sallyeats.com</a></p>
+
+                                                  </div>
+                                                  <div class="col-4">
+                                                       <img
+                                                       src="https://farm5.staticflickr.com/4372/35751642504_7f42df4ced_m.jpg" alt="" class="rounded">
+                                                  </div>
+
+                                                  <div class="col-8">
+                                                       <span class="row post-header"><h6 class="col-8 post-owner username">School Website</h6></span>
+                                                       <p>Using APIs, HTML, CSS, and jQuery I upgraded the website of my school. Here's a link to it -<a href="#!">www.ridgehs.com</a></p>
+                                                  </div>
+
+                                                  <div class="col-4">
+                                                       <img src="https://farm5.staticflickr.com/4426/36418554632_b79aca3cb2_m.jpg" alt="" class="rounded">
+                                                  </div>
+
+                                                  <div class="col-8">
+                                                       <span class="row post-header"><h6 class="col-8 post-owner username">Basketball Team Site</h6></span>
+                                                       <p>Using HTML, CSS, and jQuery I upgraded the website of my basketball website. Here's a link to it - <a href="#!">www.ridgebball.com</a></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="misc col-xl-3 romy2">
+                         <div>
+                              <button type="button" class="btn btn-success">Hire Student!</button>
+                         </div>
+                         <div class="card">
+                              <ul class="nav">
+                                   <span class="badge">Bootstrap</span>
+                                   <span class="badge badge-pill badge-light"><a href="#!" class="badge-link">Mohammed Ajao</a></span>
+                                   <span class="badge badge-pill badge-light"><a href="#!" class="badge-link">Nate Yaw</a></span>
+                                   <span class="badge badge-pill badge-light"><a href="#!" class="badge-link">Ramses Hereford</a></span>
+                              </ul>
+                         </div>
+                         <div class="card">
+                              <h6><strong>Resumé</strong></h6>
+                              <a href="#!">Resume link</a>
+                         </div>
+                    </div>
+                    <div class="feed-sec col-xl-6 romy">
+                         <div class="card">
+                              <div class="card-header">
+                                   <strong>Testimonials</strong>
+                              </div>
+                              <ul class="list-group">
+                                   <li class="list-group-item">
+                                        <div class="container post">
+                                             <div class="row">
+                                                  <div class="col-4">
+                                                       <img src="https://farm5.staticflickr.com/4414/35752228174_3a25c91100_m.jpg" alt="" class="rounded-circle">
+                                                  </div>
+                                                  <div class="col-8">
+                                                       <span class="row post-header"><h6 class="col-8 post-owner username">Peter Ferrara</h6></span>
+                                                       <p>Oliver is a very focused and hard-working developer. He developed our school website thus making it easier for users to navigate and giving it a more modern look.</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     `,
+     success_story: `
+     <div class="success">
+        <div class="text-center">
+                <div class="background-image" >
+                    <div class="jumbotron overlay text-center" style="vertical-align: middle;">
+                        <h1 style="margin-top: 4rem;">Zero To Hero</h1>
+                        <p> By Ramses Hereford </p>
+                    </div>
+                </div>
+                <div class="row container-fluid text-center article">
+                    <h1 class="page-header text-center">Freelancer to Google Intern</h1>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div>
+                        <hr>
+                    </div>
+                    <div>
+                        <span class="float-left"><img src="assets/mwin.jpg" alt="" class="success-image"></span>
+                        <span class="success-content">
+                            <p class="text-left success-story">
+                            “Our system is flexible for whatever you want to optimize it for,” says PhD student Hongzi Mao, who was lead author on a related paper with Alizadeh and PhD student Ravi Netravali. “You could even imagine a user personalizing their own streaming experience based on whether they want to prioritize rebuffering versus resolution.”
+                              The paper will be presented at next week’s SIGCOMM conference in Los Angeles. The team will also be open-sourcing the code for the project.
+                              How adaptive bitrate works<br><br>
+                              Broadly speaking, there are two kinds of ABR algorithms: rate-based ones that measure how fast networks transmit data, and buffer-based ones that ensure that there’s always a certain amount of future video that’s already been buffered.
+                              Both types are limited by the simple fact that they aren’t using information about both rate and buffering. As a result, these algorithms often make poor bitrate decisions and require careful hand-tuning by human experts to adapt to different network conditions.
+                              Researchers have also tried to combine the two methods: A system out of Carnegie Mellon University outperforms both schemes using “model predictive control” (MPC), an approach that aims to optimize decisions by predicting how conditions will evolve over time. This is a major improvement, but still has the problem that factors like network speed can be hard to model.
+                              “Modeling network dynamics is difficult, and with an approach like MPC you’re ultimately only going to be as good as your model,” say Alizadeh.<br><br>
+                              Pensieve doesn’t need a model or any existing assumptions about things like network speed. It represents an ABR algorithm as a neural network and repeatedly tests it in situations that have a wide range of buffering and network speed conditions.
+                              The system tunes its algorithms through a system of rewards and penalties. For example, it might get a reward anytime it delivers a buffer-free, high-resolution experience, but a penalty if it has to rebuffer.
+                              “It learns how different strategies impact performance, and, by looking at actual past performance, it can improve its decision-making policies in a much more robust way,” says Mao, who was lead author on the new paper.
+                              Content providers like YouTube could customize Pensieve’s reward system based on which metrics they want to prioritize for users. For example, studies show that viewers are more accepting of rebuffering early in the video than later, so the algorithm could be tweaked to give a larger penalty for rebuffering over time.
+                              Melding machine learning with deep-learning techniques<br><br>
+                              The team tested Pensieve in several settings, including using Wifi at a cafe and an LTE network while walking down the street. Experiments showed that Pensieve could achieve the same video resolution as MPC, but with a reduction of 10 to 30 percent in the amount of rebuffering.
+                              “Prior approaches tried to use control logic that is based on the intuition of human experts,” says Vyaz Sekar, an assistant professor of electrical and computer engineering at Carnegie Mellon University who was not involved in the research. “This work shows the early promise of a machine-learned approach that leverages new ‘deep learning’-like techniques.”
+                              Mao says that the team’s experiments indicate that Pensieve will work well even in situations it hasn’t seen before.<br>
+                              “When we tested Pensieve in a ‘boot camp’ setting with synthetic data, it figured out ABR algorithms that were robust enough for real networks,” says Mao. “This sort of stress test shows that it can generalize well for new scenarios out in the real world.”
+                              Alizadeh also notes that Pensive was trained on just a month’s worth of downloaded video. If the team had data at the scale of what Netflix or YouTube has, he says that he’d expect their performance improvements to be even more significant.
+                              As a next project his team will be working to test Pensieve on virtual-reality (VR) video.<br><br>
+                              “The bitrates you need for 4K-quality VR can easily top hundreds of megabits per second, which today’s networks simply can’t support,” Alizadeh says. “We're excited to see what systems like Pensieve can do for things like VR. This is really just the first step in seeing what we can do.”
+                              Pensieve was funded, in part, by the National Science Foundation and an innovation fellowship from Qualcomm.
+                            </p>
+                        </span>
+                    </div>
+                </div>
+        </div>
+    </div>
      `
 }

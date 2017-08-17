@@ -4,8 +4,8 @@ html,body {
      overflow-x: hidden;
 }
 
-#app {
-     background-image: url("https://slack-imgs.com/?c=1&url=https%3A%2F%2Ffarm5.staticflickr.com%2F4425%2F36423310582_78ecd816c1_m.jpg");
+.logo-appearance {
+     background-image: url("http://www.onlineuniversities.com/wp-content/uploads/2012/06/10-Startling-Stats-About-Minorities-in-STEM.png");
      background-repeat: no-repeat;
      background-size: cover;
 }
@@ -44,7 +44,6 @@ body {
      font-size: 1rem;
      font-family: "Open Sans";
      line-height: 1.6;
-     background-color: #f8f9fa;
 }
 
 .disappear {
@@ -137,4 +136,24 @@ body {
      display: inline-block;
      vertical-align: top;
      line-height: 34px;
+}
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.float {
+     animation: float 6s ease-in-out infinite;
 }

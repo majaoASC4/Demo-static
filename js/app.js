@@ -29,6 +29,17 @@ function renderProfilePage()
      }
 }
 
+function renderSampleProfile()
+{
+     $("#app").html(templates.sample_profile)
+     handleSampleProfile()
+}
+
+function handleSampleProfile()
+{
+
+}
+
 function handleHeaderMain()
 {
      $("#job-add").click(function(e){
@@ -43,6 +54,10 @@ function handleHeaderMain()
      $("#job-display").click(function(e){
           e.preventDefault()
           renderJobListings()
+     })
+     $("#success-story").click(function(e){
+          e.preventDefault()
+          renderSuccessStory()
      })
 }
 
@@ -69,8 +84,9 @@ function renderJobListings()
                     <div class="col"></div>
                     <div class="col-8">
                          <h3 class="page-header">`+jobName+`</h3>
-                         <h4 class="company-name">`+comp+`<span class="host"> | `+offerer+` </span></h4>
-                         <p class="job-desc">`+desc+`</p>
+                         <h4 class="company-name" style="font-size: 1rem; font-weight: bold">`+comp+`<span class="host"> | `+offerer+` </span></h4>
+                         <p class="job-desc">`+desc.substring(0,150)+"..."+`</p>
+                         <p class="full-desc" style="display: none;">`+desc+`</p>
                          <hr>
                          <span><a href=`+website+` class="text-left site">`+website+`</a><br><a href="" class="text-right location">`+location+`</a></span>
                     </div>
@@ -85,7 +101,7 @@ function handleJobListings()
      console.log("Called")
      $(".job-view-link").click(function(e){
           let parent = $(this).parents("li.row")
-          let desc = parent.children("div.col-8").children(".job-desc").text()
+          let desc = parent.children("div.col-8").children(".full-desc").text()
           let jobName = parent.children("div.col-8").children(".page-header").text()
           let website = parent.children("div.col-8").children(".site").text()
           let location = parent.children("div.col-8").children(".location").text()
@@ -104,6 +120,11 @@ function handleJobListings()
 function handleHeaderSecondary()
 {
 
+}
+
+function renderSuccessStory()
+{
+     $("#app").html(templates.success_story)
 }
 
 function handleProfile()
@@ -125,15 +146,19 @@ function handleProfile()
      })
 }
 
-function manageProfileListings()
+function handleProfileListings()
 {
-
+     $(".sample-profile").click(function(e){
+          e.preventDefault()
+          renderSampleProfile()
+     })
 }
+
 
 function renderProfileListings()
 {
      $("#app").html(templates.profile_list)
-     manageProfileListings()
+     handleProfileListings()
 }
 
 function handleAdminPanel()
